@@ -1,3 +1,5 @@
+using Banking.API.Interfaces;
+using Banking.API.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -22,13 +24,30 @@ namespace Banking.API
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
+
+
+
+        // konfiguracja aplikaji
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            // rejestracja biblioteki NewtonSoft Json
+            services.AddControllers().AddNewtonsoftJson();
+
+
+            services.AddAuthentication();
+
+
+            // rejestracja serwisów
+            services.AddScoped<IStudentService, StudentService>();
+
+
+
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+
+
+
+
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
@@ -40,6 +59,7 @@ namespace Banking.API
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
