@@ -21,15 +21,12 @@ namespace Banking.API.Controllers
         }
 
 
-
         [HttpGet("/api/students")]
         public string GetStudents()
         {
             var studentList = _studentService.GetStudents();
             return JsonConvert.SerializeObject(studentList);
+            
         }
-
-
-
     }
 }
