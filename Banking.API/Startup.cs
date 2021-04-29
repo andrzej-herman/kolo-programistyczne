@@ -44,7 +44,7 @@ namespace Banking.API
             });
 
             // rejestracja serwisów
-            services.AddScoped<IStudentService, StudentService>();
+            services.AddScoped<IMainPageService, MainPageService>();
 
 
 

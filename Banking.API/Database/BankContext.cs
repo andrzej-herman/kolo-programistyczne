@@ -12,9 +12,7 @@ namespace Banking.API.Database
         public BankContext(DbContextOptions options) : base(options) { }
         protected BankContext() { }
 
-
-        // przepis dla mappera
-        public DbSet<Student> Students { get; set; }
+        public DbSet<MainPageInfo> MainPageData { get; set; }
 
     }
 }
