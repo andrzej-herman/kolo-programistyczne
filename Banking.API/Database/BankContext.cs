@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Banking.API.Entities;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,11 +14,7 @@ namespace Banking.API.Database
 
 
         // przepis dla mappera
-        // jakie obiekty (klasy) chcemy zmapować do bazy danych
-
-
-
-
+        public DbSet<Student> Students { get; set; }
 
     }
 }
