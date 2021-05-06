@@ -21,10 +21,10 @@ namespace Banking.API.Controllers
         }
 
         [HttpGet("/api/mainpage")]
-        public string GetDataForMainPage()
+        public async Task<JsonResult> GetDataForMainPage()
         {
-            var data = _mainPageService.GetMainPageData();
-            return JsonConvert.SerializeObject(data);
+            var data = await _mainPageService.GetMainPageData();
+            return new JsonResult(data);
         }
     }
 }

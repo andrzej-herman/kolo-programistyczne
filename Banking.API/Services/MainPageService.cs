@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Banking.API.Database;
 using Banking.API.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace Banking.API.Services
 {
@@ -17,9 +18,9 @@ namespace Banking.API.Services
             _db = context;
         }
 
-        public List<MainPageInfo> GetMainPageData()
+        public async Task<List<MainPageInfo>> GetMainPageData()
         {
-            return _db.MainPageData.OrderByDescending(info => info.Date).Take(3).ToList();
+            return await _db.MainPageData.OrderByDescending(info => info.Date).Take(3).ToListAsync();
         }
     }
 }

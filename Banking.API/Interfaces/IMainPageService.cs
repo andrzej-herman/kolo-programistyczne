@@ -9,6 +9,6 @@ namespace Banking.API.Interfaces
 {
     public interface IMainPageService
     {
-        List<MainPageInfo> GetMainPageData();
+        Task<List<MainPageInfo>> GetMainPageData();
     }
 }
