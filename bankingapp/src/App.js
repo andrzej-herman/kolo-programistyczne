@@ -1,8 +1,20 @@
+import React from "react";
+import { Container, Row, Col } from "react-bootstrap";
+import MainPageInfoContainer from "./components/MainPageInfoContainer";
+
 const App = () => {
   return (
-    <div className="app">
-      <h1 className="main_title">Kołko programistyczne</h1>
-    </div>
+    <Container>
+      <Row>
+        <Col>
+          <div>Logowanie</div>
+        </Col>
+        <Col>
+          <div>Reklama</div>
+        </Col>
+      </Row>
+      <MainPageInfoContainer />
+    </Container>
   );
 };
 

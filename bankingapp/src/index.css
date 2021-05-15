@@ -1,3 +1,22 @@
-.main_title {
-  font-size: 100px;
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+
+* {
+  font-family: "Lato", sans-serif;
+}
+
+.main-page-info {
+  margin-top: 50px;
+}
+
+.main-page-info-date {
+  font-size: 12px;
+}
+
+.main-page-info-title {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.main-page-info-content {
+  text-align: justify;
 }
