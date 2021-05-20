@@ -12,7 +12,20 @@ namespace Banking.API.Database
         public BankContext(DbContextOptions options) : base(options) { }
         protected BankContext() { }
 
+        public List<string> Errors { get; set; }
+
         public DbSet<MainPageInfo> MainPageData { get; set; }
+
+        public void ClearErrors()
+        {
+            Errors = new List<string>();
+        }
+
+        public void AddError(string error)
+        {
+            Errors.Add(error);
+        }
+
 
     }
 }

@@ -25,10 +25,24 @@ namespace Banking.API
         }
 
         public IConfiguration Configuration { get; }
+        readonly string CorsOrigins = "_corsOrigins";
 
         // konfiguracja aplikaji
         public void ConfigureServices(IServiceCollection services)
         {
+            // cors => ominiêcie zabezpiecznia API (pozwalamy na: ka¿dy adres IP, ka¿dy rodzaj requestu, ka¿dy header)
+            services.AddCors(options =>
+            {
+                options.AddPolicy(CorsOrigins,
+                    builder =>
+                    {
+                        builder
+                        .AllowAnyOrigin()
+                        .AllowAnyMethod()
+                        .AllowAnyHeader();
+                    });
+            });
+
             // rejestracja biblioteki NewtonSoft Json
             services.AddControllers().AddNewtonsoftJson();
 
@@ -45,13 +59,7 @@ namespace Banking.API
 
             // rejestracja serwisów
             services.AddScoped<IMainPageService, MainPageService>();
-
-
-
         }
-
-
-
 
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -62,7 +70,7 @@ namespace Banking.API
             }
 
             app.UseHttpsRedirection();
-
+            app.UseCors(CorsOrigins);
             app.UseRouting();
 
             app.UseAuthentication();

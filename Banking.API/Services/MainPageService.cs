@@ -24,3 +24,31 @@ namespace Banking.API.Services
         }
     }
 }
+
+
+
+
+
+// Transaction
+
+//public async Task AddInfos(List<MainPageInfo> infos)
+//{
+//    _db.ClearErrors();
+//    using (var transaction = _db.Database.BeginTransaction())
+//    {
+//        try
+//        {
+//            foreach (var info in infos)
+//            {
+//                await _db.MainPageData.AddAsync(info);
+//                await _db.SaveChangesAsync();
+//            }
+//            await transaction.CommitAsync();
+//        }
+//        catch (Exception ex)
+//        {
+//            _db.AddError(ex.ToString());
+//            await transaction.RollbackAsync();
+//        }
+//    }
+//}

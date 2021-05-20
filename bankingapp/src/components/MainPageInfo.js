@@ -1,12 +1,12 @@
 import React from "react";
 import { Col } from "react-bootstrap";
 
-const MainPageInfo = ({ info }) => {
+const MainPageInfo = (props) => {
   return (
     <Col>
-      <p className="main-page-info-date">{info.date}</p>
-      <p className="main-page-info-title">{info.title}</p>
-      <p className="main-page-info-content">{info.content}</p>
+      <p className="main-page-info-date">{props.x.date}</p>
+      <p className="main-page-info-title">{props.x.title}</p>
+      <p className="main-page-info-content">{props.x.content}</p>
     </Col>
   );
 };
