@@ -1,18 +1,17 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import MainPageInfoContainer from "./components/MainPageInfoContainer";
+import "./components/MainPage/MainPage.css";
+import { Container } from "react-bootstrap";
+import MainPageHeader from "./components/MainPage/MainPageHeader";
+import MainPageInfoContainer from "./components/MainPage/MainPageInfoContainer";
+import MainPageLoginContainer from "./components/MainPage/MainPageLoginContainer";
+import HorizontalDivider from "./components/Common/HorizontalDivider";
 
 const App = () => {
   return (
     <Container>
-      <Row>
-        <Col>
-          <div>Logowanie</div>
-        </Col>
-        <Col>
-          <div>Reklama</div>
-        </Col>
-      </Row>
+      <MainPageHeader />
+      <MainPageLoginContainer />
+      <HorizontalDivider />
       <MainPageInfoContainer />
     </Container>
   );

@@ -1,0 +1,82 @@
+.main-page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.main-page-logo {
+  height: 70px;
+  width: auto;
+}
+
+.main-page-info {
+  margin-top: 50px;
+}
+
+.main-page-info-col {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.main-page-info-date {
+  font-size: 12px;
+}
+
+.main-page-info-title {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.main-page-info-content {
+  text-align: justify;
+  font-size: 13px;
+}
+
+.main-page-login-container {
+  display: flex;
+  height: 400px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.login {
+  flex: 0.4;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-top {
+  flex: 0.2;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.main-page-promo {
+  flex: 0.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-page-promo-img {
+  margin-right: 50px;
+  height: 200px;
+  width: auto;
+}
+
+.login-button-container {
+  text-align: right;
+  margin-top: 30px;
+}
+
+.login-button {
+  padding-left: 40px !important;
+  padding-right: 40px !important;
+}

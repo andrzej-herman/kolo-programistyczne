@@ -4,19 +4,20 @@
   font-family: "Lato", sans-serif;
 }
 
-.main-page-info {
-  margin-top: 50px;
+.vertical-divider {
+  width: 1px;
+  background-color: #c4cec5;
+  opacity: 0.7;
+  height: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
-.main-page-info-date {
-  font-size: 12px;
-}
-
-.main-page-info-title {
-  font-size: 18px;
-  font-weight: 700;
-}
-
-.main-page-info-content {
-  text-align: justify;
+.horizontal-divider {
+  height: 1px;
+  background-color: #c4cec5;
+  opacity: 0.7;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }

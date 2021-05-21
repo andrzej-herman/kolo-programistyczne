@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Row } from "react-bootstrap";
 import MainPageInfo from "./MainPageInfo";
-import API from "../axios/api";
+import API from "../../axios/api";
 
 const MainPageInfoContainer = () => {
   const [info, setInfo] = useState(null);
