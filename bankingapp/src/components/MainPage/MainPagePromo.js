@@ -1,6 +1,7 @@
 import React from "react";
 import Promo from "../../images/promo.jpg";
 import { Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const MainPagePromo = () => {
   return (
@@ -12,7 +13,9 @@ const MainPagePromo = () => {
           Super oferta dla nowych osób otwierających konto. Otwór konto, a
           będziesz mógł ciszyć się darmowym kredytem.
         </p>
-        <Button variant="danger">Sprawdź szczegóły oferty</Button>
+        <Link to="/promo-credit">
+          <Button variant="danger">Sprawdź szczegóły oferty</Button>
+        </Link>
       </div>
     </div>
   );
