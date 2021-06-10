@@ -15,6 +15,7 @@ namespace Banking.API.Database
         public List<string> Errors { get; set; }
 
         public DbSet<MainPageInfo> MainPageData { get; set; }
+        public DbSet<User> Users { get; set; }
 
         public void ClearErrors()
         {

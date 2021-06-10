@@ -67,6 +67,7 @@ namespace Banking.API
 
             // rejestracja serwisów
             services.AddScoped<IMainPageService, MainPageService>();
+            services.AddScoped<IAuthService, AuthService>();
         }
 
 

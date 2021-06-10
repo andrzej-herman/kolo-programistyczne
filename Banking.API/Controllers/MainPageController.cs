@@ -1,4 +1,5 @@
-﻿using Banking.API.Interfaces;
+﻿using Banking.API.Entities;
+using Banking.API.Interfaces;
 using Banking.API.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -21,10 +22,9 @@ namespace Banking.API.Controllers
         }
 
         [HttpGet("/api/mainpage")]
-        public async Task<JsonResult> GetDataForMainPage()
+        public async Task<IEnumerable<MainPageInfo>> GetDataForMainPageAsync()
         {
-            var data = await _mainPageService.GetMainPageData();
-            return new JsonResult(data);
+            return await _mainPageService.GetMainPageData();
         }
     }
 }
