@@ -1,5 +1,6 @@
 ﻿using Banking.API.Dto;
 using Banking.API.Entities;
+using Banking.API.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,6 @@ namespace Banking.API.Interfaces
 {
     public interface IAuthService
     {
-        Task<User> Login(LoginDto dto);
+        Task<string> LoginAdminAsync(string identifier, string plainPassword, LoginIdentifier type);
     }
 }

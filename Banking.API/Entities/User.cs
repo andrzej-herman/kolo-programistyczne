@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Banking.API.Helpers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -34,9 +35,4 @@ namespace Banking.API.Entities
    
     }
 
-    public enum UserType
-    {
-        Admin = 1,
-        User = 2
-    }
 }
